@@ -1,0 +1,50 @@
+﻿<Page x:Class="MyDictionaryProject.Pages.TrainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyDictionaryProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="650"
+      Background="#FFE0E0E0"
+      Title="TrainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10 10 2 45">
+            <Label Content="English" Style="{DynamicResource MyLabel}"/>
+        </StackPanel>
+
+        <TextBox Grid.Row="0" Grid.Column="0" x:Name="txtEnlish" Margin="10 35 2 0" Style="{DynamicResource MouseOverImageChange_TextBox}" IsReadOnly="True"/>
+
+
+        <StackPanel  Grid.Row="0" Grid.Column="1" Margin="2 10 10 45">
+            <Label Content="Russian" Style="{DynamicResource MyLabel}"/>
+        </StackPanel>
+
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="2 35 10 0" x:Name="txtRussian" Style="{DynamicResource MouseOverImageChange_TextBox}" KeyDown="txtRussian_KeyDown"/>
+
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Margin="10 10 10 0">
+            <Label Content="Words" Style="{DynamicResource MyLabel}" />
+        </StackPanel>
+
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10 35 10 0"  x:Name="txtWords" BorderThickness="0"  ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
+        <Border Background="White" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,13,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Style="{DynamicResource userButton}" Content="All" x:Name="btnAll" Click="btnAll_Click" ></Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
